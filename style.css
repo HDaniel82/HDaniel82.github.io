@@ -93,10 +93,12 @@ nav ul li a:hover::after {
 .about-col-1{
     flex-basis: 35%;
 }
-.about-col-1 image{ /*adding a border to the picture */
+/*
+.about-col-1 image{ 
     width: 100%;
     border-radius: 15px;
 }
+*/ 
 .about-col-2{ /*This will take care of the distance between About me and the picture*/
     flex-basis: 55%;
 }
@@ -135,7 +137,7 @@ nav ul li a:hover::after {
 .tablinks:hover::after {
     width: 100%; /* Full width of the element on hover */
 }
-/* youtube at 27:33 
+/* youtube at 27:33 */ 
 
 /* The following represents the format for the drop downs on main page */
 details {
