@@ -1,1 +1,121 @@
-Hello World
+<!--Hello World--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Huynh's Personal Website </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the 2 files of html and css-->>
+</head>
+<body>
+<!-----------------------------------Logo/ Introduction----------------------------------------------->>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Files/Logo.png" class="logo">
+            <ul>
+                <li><a href = "#">Home</a></li>
+                <li><a href = "#">Portfolio</a></li>
+                <li><a href = "Daniel's_Resume.pdf" download="Daniel_Huynh_Resume.pdf">Resume</a></li>
+                <li><a href = "https://www.linkedin.com/in/daniel-huynh-64b3b92ab/" target = "_blank">LinkedIn</a></li>
+                <li><a href="#" onclick="openForm()">Contact</a></li>
+            </ul>
+        </nav>
+<!-----------------------------------Make it so that these are the only once here at all times----------------------------------------------->>
+        <div class="header-text">
+            <p>Comp Sci Student at UAB</p>
+            <h1>Hi, I'm Daniel Huynh <br>from Birmingham, Alabama</h1>
+        </div>
+    <!--</div>>
+<!--</div>>
+<!-----------------------------------About Me----------------------------------------------->>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <!--<img src="images/background.png">-->
+            </div> 
+            <div class="about-col-2"> <!--text about me-->>
+                <h1 class="subtitle">About Me</h1>
+                <p>I'm currently a senior at the University of Alabama at Birmingham (UAB),
+                majoring in Computer Science with a minor in Mathematics. My fascination 
+                with technology started at an early age, inspired by the way machines are 
+                able to communicate and interact with each other in sci-fi shows. This curiosity has 
+                driven me to explore the world of programming, algorithms, and data structures, where I 
+                can one day turn fiction into reality. I'm passionate about pushing the boundaries of whats
+                possible with technology and excited to see where this journey takes me. 
+            </p>
+                <div class="tabs"> <!-- </div>!> --> 
+                    <details>
+                        <summary class="tablinks">Skills</summary>
+                        <p>• HTML, CSS, JavaScript<br>• Python, C, Java<br>• Git, React, Flask</p>
+                    </details>
+                    <details>
+                        <summary class="tablinks">Experience</summary>
+                        <p>• Undergraduate Research Assistant at UAB<br>• Developed web applications</p>
+                    </details>
+                    <details>
+                        <summary class="tablinks">Education</summary>
+                        <p>• Junior at UAB<br>• B.S. in Computer Science, Math minor</p>
+                    </details>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const allDetails = document.querySelectorAll("details");
+                        allDetails.forEach((detail) => {
+                            detail.addEventListener("toggle", function () {
+                        if (detail.open) {
+                            allDetails.forEach((otherDetail) => {
+                                if (otherDetail !== detail) {
+                                    otherDetail.open = false;
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    <!-- Contact Popup Form -->
+                <div id="contactForm" class="popup-form">
+                    <form id="contact-form">
+                        <h2>Contact Me</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea name="message" rows="4" required></textarea>
+                        <button type="submit">Send</button>
+                        <button type="button" onclick="closeForm()">Close</button> <!-- Close button added -->
+                    </form>
+                    <!--Open and close Script for popup-->>
+                    <script> 
+                    function openForm() {
+                        document.getElementById("contactForm").style.display = "block";
+                    }
+                    function closeForm() {
+                        document.getElementById("contactForm").style.display = "none";
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----Bottom of the page-->>
+<div id="end">
+    <div class="container2">
+        <nav>
+            <ul>
+                <li><a href = "https://www.linkedin.com/in/daniel-huynh-64b3b92ab/" target = "_blank">LinkedIn</a></li>
+                <li><a href = "https://github.com/HDaniel82" target = "_blank">GitHub</a></li>
+                <li><a href="#" onclick="openForm()">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
+
+
+
