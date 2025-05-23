@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808; /* background color*/
+    color: #fff; /*Text color*/
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(images/background.png);*/
+    background-size: cover;
+    background-position: center;
+}
+#end{
+    text-align: center;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .container2 nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .container2 nav ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 275px;
+}
+/*First nav ul li is used to get the texts on the right side*/
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+/*This nav ul li a is used for the color, size and position*/
+nav ul li a {
+    color: #d4cfcf;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+/*a::after is used for the underline animation; default set is 0 with transition timing
+hover function is taken care of in the next one*/
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d4cfcf;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/*This takes care of when the user hovers over the 5 tabs the animation becomes visible*/
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text{
+    margin-top: 2.5%;
+    font-size: 25px;
+}
+.header-text h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+#about{
+    padding: 80px 0;
+    color: #d4cfcf;
+}
+.row{ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 image{ /*adding a border to the picture */
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{ /*This will take care of the distance between About me and the picture*/
+    flex-basis: 55%;
+}
+.subtitle{
+    font-size: 55px;
+    font-weight: 600;
+    color:#d4cfcf;
+}
+
+/* Beginning of the tab links and their animations */ 
+.tabs{
+    display: block;
+    margin: 20px 0 ;
+}
+.tablinks {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+/* Create the underline effect using ::after */
+.tablinks::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d4cfcf;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /* Smooth transition for the underline */
+}
+
+/* Hover effect to make the underline grow and change the color */
+.tablinks:hover::after {
+    width: 100%; /* Full width of the element on hover */
+}
+/* youtube at 27:33 
+
+/* The following represents the format for the drop downs on main page */
+details {
+    margin-bottom: 25px;
+}
+summary {
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 10px; /* Adds space below the summary */
+}
+summary::marker {
+    font-size: 1.2em;
+}
+
+/*Popup*/
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #1a1a1a; 
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  z-index: 9999;
+  width: 350px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-form h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #d4cfcf;
+}
+
+.popup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #d4cfcf;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+  outline: none;
+  border-color: #d4cfcf;
+  background: #333;
+}
+
+.popup-form button {
+  background-color: #d4cfcf;
+  color: #080808;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-form button:hover {
+  background-color: #b0aaaa;
+}
