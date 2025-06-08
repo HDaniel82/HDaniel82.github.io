@@ -154,7 +154,7 @@ summary::marker {
     font-size: 1.2em;
 }
 
-/*Popup*/
+/*
 .popup-form {
   display: none;
   position: fixed;
@@ -218,3 +218,4 @@ summary::marker {
 .popup-form button:hover {
   background-color: #b0aaaa;
 }
+*/

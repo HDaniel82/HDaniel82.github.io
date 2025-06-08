@@ -87,60 +87,10 @@ git push orign main
                 <div id="contactForm" class="popup-form">
                     <form id="contact-form">
                         <h2>Contact Me</h2>
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" required>
-                        <label for="message">Message:</label>
-                        <textarea name="message" rows="4" required></textarea>
-                        <button type="submit">Send</button>
-                        <button type="button" onclick="closeForm()">Close</button> <!-- Close button added -->
+                        <p>Click below to email me directly:</p>
+                        <a = a href="mailto:DanielTHuyn@outlook.com" class="email-button">Send via Outlook</a>
+                        <button type = "button" onclick="closeForm()">Close</button>>
                     </form>
-                    <iframe 
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQINUdspryUH1uJnmkJTo148cjEPoQdFS1mzKprSJAelvUoY5Zgah0Eqjn30syAkyfvAv0p6AfthPAq/pubhtml?gid=0&single=true"
-                        width="100%" 
-                        height="500" 
-                        frameborder="0">
-                    </iframe>
-                    <!--Open and close Script for popup-->>
-                    <script> 
-                    function openForm() {
-                        document.getElementById("contactForm").style.display = "block";
-                    }
-                    function closeForm() {
-                        document.getElementById("contactForm").style.display = "none";
-                    }
-                    </script>
-                    <!-- https://script.google.com/macros/s/-/ -->>
-                    <script>
-                    document.getElementById("contact-form").addEventListener("submit", function(e) {
-                        e.preventDefault();
-
-                        const formData = {
-                            name: this.name.value,
-                            email: this.email.value,
-                            message: this.message.value
-                        };
-
-                        fetch("https://script.google.com/macros/s/AKfycbzuo0f19K8sZ1sioIkPI_IwIUW5R8JEvjboLex913Ga6HwKtH0UgucvOhqChLR6qMw2/exec", {
-                            method: "POST",
-                            body: JSON.stringify(formData),
-                            headers: {
-                                "Content-Type": "application/json"
-                                }
-                            })
-                        .then(res => res.json())
-                        .then(data => {
-                            alert("Message sent successfully!");
-                            document.getElementById("contact-form").reset();
-                            closeForm(); // Optionally close the popup
-                        })
-                        .catch(err => {
-                        alert("Error sending message. Please try again.");
-                        console.error(err);
-                    });
-                });
-                    </script>
                 </div>
             </div>
         </div>
