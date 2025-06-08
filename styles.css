@@ -153,3 +153,19 @@ summary {
 summary::marker {
     font-size: 1.2em;
 }
+
+/* Infinite Scroll */
+#infinte-content { 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.sub-block { 
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}

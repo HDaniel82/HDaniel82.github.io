@@ -68,22 +68,6 @@ git push orign main
                         <summary class="tablinks">Education</summary>
                         <p>• Senior at UAB<br>• B.S. in Computer Science, Math minor</p>
                     </details>
-                    <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const allDetails = document.querySelectorAll("details");
-                        allDetails.forEach((detail) => {
-                            detail.addEventListener("toggle", function () {
-                        if (detail.open) {
-                            allDetails.forEach((otherDetail) => {
-                                if (otherDetail !== detail) {
-                                    otherDetail.open = false;
-                                            }
-                                        });
-                                    }
-                                });
-                            });
-                        });
-                    </script>
             </div>
         </div>
     </div>
@@ -101,6 +85,8 @@ git push orign main
     </div>
 </div>
 </body>
+<div id="infinite-content"></div>
+<script src="script.js"></script>>
 </html>
 
 
