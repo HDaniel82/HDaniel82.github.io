@@ -21,11 +21,11 @@ git push orign main
 <div id="header">
     <div class="container">
         <nav>
-            <img src="Photos/Logo.png" class="logo">
+            <img src="Assets/Logo.png" class="logo">
             <ul>
                 <li><a href = "#">Home</a></li>
                 <li><a href = "#">Portfolio</a></li>
-                <li><a href = "Photos/Daniel_Huynh's_Resume.pdf" download="Daniel_Huynh's_Resume.pdf">Resume</a></li>
+                <li><a href = "Assets/Daniel_Huynh's_Resume.pdf" download="Daniel_Huynh's_Resume.pdf">Resume</a></li>
                 <li><a href = "https://www.linkedin.com/in/daniel-huynh-64b3b92ab/" target = "_blank">LinkedIn</a></li>
                 <li><a href="#" onclick="openForm()">Contact</a></li>
             </ul>
@@ -96,6 +96,12 @@ git push orign main
                         <button type="submit">Send</button>
                         <button type="button" onclick="closeForm()">Close</button> <!-- Close button added -->
                     </form>
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQINUdspryUH1uJnmkJTo148cjEPoQdFS1mzKprSJAelvUoY5Zgah0Eqjn30syAkyfvAv0p6AfthPAq/pubhtml?gid=0&single=true"
+                        width="100%" 
+                        height="500" 
+                        frameborder="0">
+                    </iframe>
                     <!--Open and close Script for popup-->>
                     <script> 
                     function openForm() {
@@ -116,7 +122,7 @@ git push orign main
                             message: this.message.value
                         };
 
-                        fetch("https://script.google.com/macros/s/AKfycbx9Jema23ZjITTLi0dOcWKFlCn8E6-hI4juaxKYhg0DRV_vrDoCJul7TYj9OVDIi_hN/exec", {
+                        fetch("https://script.google.com/macros/s/AKfycbzuo0f19K8sZ1sioIkPI_IwIUW5R8JEvjboLex913Ga6HwKtH0UgucvOhqChLR6qMw2/exec", {
                             method: "POST",
                             body: JSON.stringify(formData),
                             headers: {
