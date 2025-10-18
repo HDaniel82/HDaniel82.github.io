@@ -191,11 +191,14 @@ nav ul li a:hover::after {
 #about{
     padding: 80px 0;
     color: #d4cfcf;
+    text-align: center;
 }
 .row{ 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .about-col-1{
     flex-basis: 35%;
@@ -207,7 +210,9 @@ nav ul li a:hover::after {
 }
 */ 
 .about-col-2{ /*This will take care of the distance between About me and the picture*/
-    flex-basis: 55%;
+    flex-basis: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .subtitle{
     font-size: 55px;
