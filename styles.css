@@ -132,21 +132,55 @@ body{
     border-color: rgba(212, 207, 207, 0.6);
 }
 #end{
-    text-align: center;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+    background: rgba(8, 8, 8, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(212, 207, 207, 0.1);
+    padding: 20px 0;
+    color: #d4cfcf;
+}
 
-        .container2 nav ul {
-            list-style: none;
-            padding: 0;
-        }
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .container2 nav ul li {
-            display: inline-block;
-            margin: 10px;
-        }
+.container2 nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+.container2 nav ul li a {
+    color: #d4cfcf;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.container2 nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #d4cfcf;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.container2 nav ul li a:hover {
+    color: #fff;
+}
+
+.container2 nav ul li a:hover::after {
+    width: 100%;
+}
 .container{
     padding: 10px 10%;
 }
