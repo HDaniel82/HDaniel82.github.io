@@ -80,7 +80,7 @@ body{
 }
 #header{
     width: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: 60vh;
     /*background-image: url(images/background.png);*/
     background-size: cover;
     background-position: center;
@@ -94,22 +94,22 @@ body{
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .header-text {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .header-text h1 {
-    margin: 20px 0 30px 0;
+    margin: 15px 0 20px 0;
     font-size: 50px;
     line-height: 1.2;
 }
 
 .header-text p {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     opacity: 0.9;
 }
 
@@ -122,7 +122,7 @@ body{
     border: 4px solid rgba(212, 207, 207, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 20px;
+    margin-top: 15px;
     /* Fixed size - no responsive changes */
 }
 
@@ -223,7 +223,7 @@ nav ul li a:hover::after {
 }
 /* Header text styling moved to new location above */
 #about{
-    padding: 80px 0;
+    padding: 40px 0;
     color: #d4cfcf;
     text-align: center;
 }
@@ -245,7 +245,7 @@ nav ul li a:hover::after {
 */ 
 .about-col-2{ /*This will take care of the distance between About me and the picture*/
     flex-basis: 100%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
 }
 .subtitle{
@@ -256,8 +256,12 @@ nav ul li a:hover::after {
 
 /* Beginning of the tab links and their animations */ 
 .tabs{
-    display: block;
-    margin: 20px 0 ;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: stretch;
 }
 .tablinks {
     display: inline-block;
@@ -287,7 +291,14 @@ nav ul li a:hover::after {
 
 /* The following represents the format for the drop downs on main page */
 details {
+    flex: 1;
+    min-width: 0;
     margin-bottom: 25px;
+    background: rgba(212, 207, 207, 0.05);
+    border: 1px solid rgba(212, 207, 207, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
 }
 summary {
     font-weight: bold;
@@ -302,7 +313,7 @@ summary::marker {
 
 /* Personal Projects section */
 #personal-projects {
-    padding: 80px 0;
+    padding: 40px 0;
     color: #d4cfcf;
     text-align: center;
 }
@@ -311,6 +322,126 @@ summary::marker {
     font-size: 18px;
     margin-top: 20px;
     opacity: 0.8;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 0;
+    color: #d4cfcf;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form {
+    background: rgba(212, 207, 207, 0.05);
+    border: 1px solid rgba(212, 207, 207, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #d4cfcf;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(212, 207, 207, 0.2);
+    border-radius: 8px;
+    background: rgba(8, 8, 8, 0.3);
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(212, 207, 207, 0.5);
+    box-shadow: 0 0 0 2px rgba(212, 207, 207, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, rgba(212, 207, 207, 0.1), rgba(212, 207, 207, 0.05));
+    border: 1px solid rgba(212, 207, 207, 0.3);
+    color: #d4cfcf;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, rgba(212, 207, 207, 0.2), rgba(212, 207, 207, 0.1));
+    border-color: rgba(212, 207, 207, 0.5);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    text-align: center;
+    padding: 20px;
+    background: rgba(212, 207, 207, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(212, 207, 207, 0.1);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.email-link {
+    color: #d4cfcf;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Responsive Design */
@@ -335,6 +466,24 @@ summary::marker {
     
     .subtitle {
         font-size: 40px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contact-form-container {
+        max-width: 90%;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    details {
+        min-width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -361,5 +510,29 @@ summary::marker {
     
     .subtitle {
         font-size: 32px;
+    }
+    
+    .contact-form {
+        padding: 15px;
+    }
+    
+    .contact-form-container {
+        max-width: 95%;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    details {
+        min-width: 100%;
+        max-width: 100%;
     }
 }
