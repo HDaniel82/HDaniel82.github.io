@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData(contactForm);
             const name = formData.get('name');
             const email = formData.get('email');
-            const subject = formData.get('subject');
             const message = formData.get('message');
             
             // Create mailto link with form data
+            const subject = `Contact from ${name} - Personal Website`;
             const mailtoLink = `mailto:DanielTHuyn@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             
             // Open email client
