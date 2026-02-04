@@ -536,3 +536,35 @@ summary::marker {
         max-width: 100%;
     }
 }
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: rgba(212, 207, 207, 0.05); /* Or a color that matches your theme */
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.project-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-card .tech-stack {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ff004f; /* Accent color */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #333;
+}
